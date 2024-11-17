@@ -1,0 +1,818 @@
+---
+title: "Geology, geomorphology, and soils"
+subtitle: "for early career botanists"
+author: "Reed Benkendorf"
+date: "2024-May-20"
+date-format: long
+format: 
+  revealjs:
+    theme: black
+    highlight: pygments
+    preview-links: auto
+    logo: ./images/CBG_Logos/NegauneeInstitute_CBG-Logo-FlowerMark.png
+    chalkboard: 
+      boardmarker-width: 5
+    reveal_options:
+      width: 1920
+      height: 1080
+    fontsize: 24pt
+editor: 
+  markdown: 
+    wrap: 72
+include-in-header:
+  - text: |
+      <style>
+      #title-slide .title {
+        font-size: 1.5em;
+      }
+      </style>
+---
+
+<style>
+
+slide.backdrop {
+  background: black;
+}
+
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(message  = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
+```
+
+
+# A brief introduction to geology, geomorphology, and soils for early career botanists
+
+::: {style="float: left; width: 50%;"}
+
+- Simplified version... Geology, generates both landforms and soils simultaneously. 
+- Linear version geology -> land forms -> soils
+:::
+
+::: {style="float: right; width: 50%;"}
+  1| Geology  
+
+  2 | Geomorphology  
+
+  3 | Soils  
+:::
+
+# I. Geology 
+
+- Igenous 
+- Sedimentary  
+- Metamorphic  
+
+## Igneous 
+
+::: {style="float: left; width: 50%;"}
+  
+- Magma (beneath earths surface - 'intrusive') & Lava (on the surface - 'extrusive') cool to form igneous rock 
+- creates two of the crusts most abundant minerals: feldspar & quartz, and mica 
+- feldspar & quartz are very resistant to weathering under typical conditions
+:::
+
+::: {style="float: right; width: 50%;"}
+```{r igneous, out.width = "85%", fig.cap= "Granitoids - Gold Butte", echo=FALSE}
+knitr::include_graphics("./images/Igneous/Granitoids_GoldButte.png")
+```
+:::
+
+## Intrusive (Igneous) 
+
+::: {style="float: left; width: 50%;"}
+
+- formed from the continual cooling of magma
+- often forming enormous masses which are able to be pushed up through the earths crust (batholiths)
+- Examples: Granite, Diorite, Gabbro
+:::
+
+::: {style="float: right; width: 50%;"}
+```{r intrusive igneous, out.width= "500px", echo=FALSE}
+p1 <- cowplot::ggdraw() + cowplot::draw_image("./images/Igneous/Intrusive/granite.jpg") 
+p2 <- cowplot::ggdraw() + cowplot::draw_image("./images/Igneous/Intrusive/diorite.jpg") 
+p3 <- cowplot::ggdraw() + cowplot::draw_image("./images/Igneous/Intrusive/Gabbro-Mindat.png")
+
+cowplot::plot_grid(
+  p1, p2, p3, NULL,
+  labels = c('Granite', 'Diorite', 'Gabbro'), ncol = 2
+)
+```
+
+:::
+
+## Extrusive (Igneous)
+
+::: {style="float: left; width: 50%;"}
+
+- formed from lava flows
+- shape and size of crystals largely defined by rate of cooling
+- Two main forms; pillow (lava flowed into water), columnar (cooled in depression) 
+- Examples: Basalt, Rhyolite, Andesite
+:::
+
+::: {style="float: right; width: 50%;"}
+```{r extrusive igneous, out.width= "500px", echo=FALSE}
+p1 <- cowplot::ggdraw() + cowplot::draw_image("./images/Igneous/extrusive/basalt.jpg") 
+p2 <- cowplot::ggdraw() + cowplot::draw_image("./images/Igneous/extrusive/scott_resources_rhyolite.jpg") 
+p3 <- cowplot::ggdraw() + cowplot::draw_image("./images/Igneous/extrusive/andesite.jpg")
+
+cowplot::plot_grid(
+  p1, p2, p3, NULL,
+  labels = c('Basalt', 'Rhyolite', 'Andesite'), ncol = 2
+)
+```
+:::
+
+## Weathering - Breakdown of bedrock
+
+Agents: Freeze-Thaw, Water, Glaciers, Plants (lichens, mosses), Wind
+
+<center>
+![British Geological Society](./images/assorted/weathering.png){height=80%}
+</center>
+
+
+## Erosion - Particle movement
+
+- River (fluvial) - in river channel
+- Water (alluvial) - ephemeral flows, flooding, stream jumping channel  
+- Wind (aeolian) - pick up and drop off sediment elsewhere
+- Gravity (colluvial) - large rocks e.g. boulders fall downhill
+
+<center>
+![Erosion](./images/assorted/EncylopediaBritannicaEROSION.png){width=70%}
+</center>
+
+
+## Sedimentary
+
+::: {style="float: left; width: 50%;"}
+Formed via the compaction of other material  
+Often from sand derived from igneous materials  
+Carbonates from animal shells  
+Mud or silt from rivers, oceans.   
+:::
+
+::: {style="float: right; width: 50%;"}
+<center>
+![Sedimentary - St. George](./images/Sedimentary/Sedimentary-StGeorge.jpg){width=75%}
+</center>
+:::
+
+## Inorganic (Sedimentary)
+
+::: {style="float: left; width: 50%;"}
+
+- Shale - formed in oceans and large lakes from compression of silt and clay
+- Sandstone - Formed from the compression of sand. 
+- The original sand generally coming from massive dune fields (terrestrial sandstone), sometimes coming from oceans/beaches 
+- Examples: Shale, Sandstone, Siltstone
+:::
+
+::: {style="float: right; width: 50%;"}
+```{r inorganic sedimentary, out.width= "500px", echo=FALSE}
+p1 <- cowplot::ggdraw() + cowplot::draw_image("./images/Sedimentary/inorganic/shale.jpg") 
+p2 <- cowplot::ggdraw() + cowplot::draw_image("./images/Sedimentary/inorganic/sandstone.jpg") 
+p3 <- cowplot::ggdraw() + cowplot::draw_image("./images/Sedimentary/inorganic/siltstone.jpg")
+
+cowplot::plot_grid(
+  p1, p2, p3, NULL,
+  labels = c('Shale', 'Sandstone', 'Siltstone'), ncol = 2
+)
+```
+:::
+
+## Organic (Sedimentary)
+
+::: {style="float: left; width: 50%;"}
+- Formed from compression of animals shells, coral reefs, lagoons
+- Examples: Limestone, Gypsum, Dolomite  
+:::
+
+::: {style="float: right; width: 50%;"}
+```{r organic sedimentary, out.width= "500px", echo=FALSE}
+p1 <- cowplot::ggdraw() + cowplot::draw_image("./images/Sedimentary/organic/limestone.jpg") 
+p2 <- cowplot::ggdraw() + cowplot::draw_image("./images/Sedimentary/organic/gypsum.jpg") 
+p3 <- cowplot::ggdraw() + cowplot::draw_image("./images/Sedimentary/organic/dolomite.jpg")
+
+cowplot::plot_grid(
+  p1, p2, p3, NULL,
+  labels = c('Limestone', 'Gypsum', 'Dolomite'), ncol = 2
+)
+```
+:::
+
+## Conglomerates
+
+::: {style="float: left; width: 50%;"}
+
+- Formed when fine particles, e.g. clay, hold together gravels, oftentimes these are also partially cemented by calcium carbonates. 
+- These generally formed in association with fluvial deposits, alluvial fans, or with glaciers.
+- Examples: Breccia (angular rock fragments), Conglomerate (rounded rock fragments)
+:::
+
+::: {style="float: right; width: 50%;"}
+```{r conglomerates, out.width= "500px", echo=FALSE}
+p1 <- cowplot::ggdraw() + cowplot::draw_image("./images/Sedimentary/inorganic/Weakly_lithified_gravel.jpg") 
+p2 <- cowplot::ggdraw() + cowplot::draw_image("./images/Sedimentary/inorganic/Breccia_(Mosaic_Canyon)-XanaG.JPG") 
+p3 <- cowplot::ggdraw() + cowplot::draw_image("./images/Sedimentary/inorganic/conglomerate.jpg")
+
+cowplot::plot_grid(
+  p1, p2, p3, NULL,
+  labels = c('Partially lithified gravel', 'Breccia (XanaG)', 'Conglomerate'), ncol = 2
+)
+```
+:::
+
+## sedimentary -or- igenous extrusive?
+
+::: {style="float: left; width: 50%;"}
+- Ash from a volcano which lands in the same area, and is compressed to create a soft rock - *tuff*. 
+:::
+
+::: {style="float: right; width: 50%;"}
+```{r sedimentary, out.width= "500px", echo=FALSE}
+p1 <- cowplot::ggdraw() + cowplot::draw_image("./images/Igneous/extrusive/leslie_gulch.jpg") 
+p2 <- cowplot::ggdraw() + cowplot::draw_image("./images/Igneous/extrusive/welded-tuff.jpg") 
+
+cowplot::plot_grid(
+  p1, p2,
+  labels = c('Leslie Gulch', 'Welded Tuff'), ncol = 1
+)
+```
+:::
+
+## Metamorphic 
+
+::: {style="float: left; width: 50%;"}
+- Rocks which are transformed via heat, and oftentimes pressure, into new rocks. 
+- Oftentimes associated with the uplift and building of mountain ranges (orogeny)
+- *protolith* is the original un-transformed rock type
+:::
+
+::: {style="float: right; width: 50%;"}
+<center>
+![Metamorphic - Pioneer Mountains](./images/Metamorphic/PioneerMtns.jpg){width=75%}
+</center>
+:::
+
+## Foliated
+
+::: {style="float: left; width: 50%;"}
+
+- Formed by both heat and extreme pressure compress the protolith in layers results in a layered appearance
+- Examples: Slate (protolith - shale), Schist (protoliths - many, e.g. mudstone, tuffs), Gneiss (protoliths - many, higher temps than schist)
+:::
+
+::: {style="float: right; width: 50%;"}
+```{r Foliated, out.width= "500px", echo=FALSE}
+p1 <- cowplot::ggdraw() + cowplot::draw_image("./images/Metamorphic/Foliated/slate.jpg") 
+p2 <- cowplot::ggdraw() + cowplot::draw_image("./images/Metamorphic/Foliated/chlorite-schist.jpg") 
+p3 <- cowplot::ggdraw() + cowplot::draw_image("./images/Metamorphic/Foliated/gneiss.jpg")
+
+cowplot::plot_grid(
+  p1, p2, p3, NULL,
+  labels = c('Slate', 'Chlorite Schist', 'Gneiss'), ncol = 2
+)
+```
+:::
+
+## Non-foliated
+
+::: {style="float: left; width: 50%;"}
+- Formed by heating the protolith, without pressure
+- rocks lack defined layering
+- Examples: Marble (limestone), Quartzite (Sandstone)
+:::
+
+::: {style="float: right; width: 50%;"}
+```{r Non foliated, out.width= "500px", echo=FALSE}
+p1 <- cowplot::ggdraw() + cowplot::draw_image("./images/Metamorphic/Non-foliated/Marble-geology.com.jpg") 
+p2 <- cowplot::ggdraw() + cowplot::draw_image("./images/Metamorphic/Non-foliated/quartzite.jpg") 
+
+cowplot::plot_grid(
+  p1, p2,
+  labels = c('Marble', 'Quartzite'), ncol = 1
+)
+```
+:::
+
+## Classification of Bedrock - Members, Formations & Groups
+
+::: {style="float: left; width: 50%;"}
+
+- Over the several millenia it takes to produce substantial amounts of Earths Crust, several processes repeatedly occur which result in a consistent mix of bedrocks.   
+- *Member* a similar set of layers  
+- *Formations* are composed of members which commonly occur together  
+- *Groups* composed of formations which commonly co-occur.   
+:::
+
+::: {style="float: right; width: 50%;"}
+
+<center>
+![Grand Canyon. Groups in black, Formations in White](./images/assorted/GrandCanyon-FormationsMembers-Maveric149.jpg){width=70%}
+</center>
+:::
+
+## Member
+
+::: {style="float: left; width: 50%;"}
+
+- Members are visually distinctive groups of layers (i.e. individual and consecutive mudstone and siltstone layers which look similar may form a member). 
+- Oftentimes from many cm to meters thin; not always delineated by geologists
+<center>
+![Mancos Shale](./images/assorted/Mancos_Shale_badlands_in_Capitol_Reef_NP.jpg){width=55%}
+:::
+
+::: {style="float: right; width: 50%;"}
+<center>
+![Capitol Reef](./images/assorted/CapitolReef.png){width=85%}
+</center>
+:::
+
+## Formation
+
+- 'Thick' enough to be mapped; distinctive enough to be readily recognizable
+- Named after a geographic location which contains the formation (e.g. Entrada Point for Entrada Sandstone)
+- often contains *many* members, not all of which are present throughout it's entire range.
+- composed of members which commonly occur together (e.g. Morrison Formation; mostly mudstones/silstone/limestone with intermittent aeolian sandstones, the former deposited sequentially in deltas or in coastal areas)  
+
+<center>
+![Mancos Shale at Capitol Reef](./images/assorted/Mancos_Shale_Formation.jpg){width=75%}
+</center>
+
+## Group
+
+- composed of formations which commonly co-occur.    
+- often cover very large geographic ranges 
+
+<center>
+![San Rafael Group](./images/assorted/San_Rafael_Group.jpg){width=75%}
+</center>
+
+# Geomorphology
+
+- Weathering of geologic formations creates signature physical features. 
+
+<center>
+![Geomorphology](./images/landforms/geomorphology.png){width=50%}
+</center>
+
+## II. Landforms 
+
+Recurring physical features across the earths surface. 
+The fundamental unit of a landscape. 
+
+<center>
+![Organ Pipe Mountains](./images/landforms/OrganPipes.jpg){width=55%}
+</center>
+
+## Mountains / Hills
+
+- Hill, slope < 30 degrees & 1000 feet prominence & no bedrock.  
+- Mountain, slope > 30 degrees, or > 1000 feet prominence, or bedrock. 
+**Origins** collision of fault blocks (~small tectonic plates)
+<font size = "4">
+**Positions** *Summit* (highest point), *Shoulder* (gen. steep slopes leading to summit), *Ridge* (highest point in three directions), *Backslope* (upper portions of slope (gen. linear/concave)), *Footslope* (lower portions of slope (gen. linear/convex)), *toeslope* (base of slope)   
+</font>
+
+::: {style="float: left; width: 70%;"}
+<center>
+![Toiyabes](./images/landforms/Toiyabes.jpg){width=85%}
+</center>
+:::
+
+::: {style="float: right; width: 30%;"}
+![Miller & Schaetzl 2015](./images/landforms/Hillslope_Positions-MillerSchaetzl.png){width=100%}
+:::
+
+## Mountains - Glacial Features
+
+::: {style="float: left; width: 50%;"}
+**Cirque**  a lake carved out by a glacier.   
+**Arete** sharp ridges initially created by glacial action on both sides, and subsequent sloughing of rock typically via freeze-thaw cycles.
+![Alpine Landforms](./images/landforms/alpine_landforms_wikipedia_NPS.png){width=100s%}
+:::
+
+::: {style="float: right; width: 50%;"}
+<font size= '5'>
+**Col** lowest point on a mountain ridge, occasionally formed via two glaciers    
+**Hanging Valley** a, generally smaller valley, above a larger one, often separated by a cliff. Created by a smaller glacier.   
+**Horn** A sharp peak which has been eroded by cirques and freeze-thaw cycles on one to multiple sides.    
+**Tarn** Body of water formed in a depression created by glacier and often bounded downhill by a moraine (debris dropped by a glacier) 
+</font>
+:::
+
+## Mesa
+
+::: {style="float: left; width: 50%;"}
+Origins   
+1) a block is uplifted by tectonic activity.   
+2) A much softer rock (oftentimes shale) erodes quickly,   
+3) until an underlying harder rock, deposited horizontally, is exposed (capstone; often sandstone).   
+
+:::
+
+::: {style="float: left; width: 50%;"}
+**Positions** *right* (nearly vertical sides), *summit* (flat top)  
+A butte is a small mesa, a plateau or tableland is a large mesa!  
+
+<center>
+![Mancos Shale](./images/assorted/Mancos_Shale_badlands_in_Capitol_Reef_NP.jpg){width=95%}
+</center>
+:::
+
+## Cuesta
+
+**Positions** *Dipslope* (gently slope), *escarpment* (steep slope)   
+**Origins** a softer bedrock is eroded away leaving behind the surface associated with a harder layer.   
+Similar to a mesa, but on it's side.
+
+::: {style="float: left; width: 60%;"}
+<center>
+![Magaliesberg Range](./images/landforms/MagaliesbergRange-Androstachys.jpg){width=85%}
+</center>
+:::
+
+::: {style="float: right; width: 40%;"}
+<center>
+![Cuesta Formation](./images/landforms/Cuesta.png){width=85%}
+</center>
+:::
+
+## Alluvial Fans & Bajadas
+
+::: {style="float: left; width: 50%;"}
+
+**Positions** *apex* (where the constricted channel opens out), *braided streams* (the channels carved out by water), *apron*  (the cone shaped section)    
+
+**Origins** soil, and rock fragments (alluvium), are washed out and deposited from mountains and hills via streams. 
+
+**Bajadas** an area where individual alluvial fans meet
+:::
+
+::: {style="float: right; width: 50%;"}
+<center>
+![Death Valley](./images/landforms/DeathValleyWash.jpg){width=65%}
+</center>
+:::
+
+## Pediment
+
+essentially bedrock with a thin layer of gravel and soil at the base of an eroding mountain; often found above a bajada   
+<br>
+*Origins* these areas are erosion, i.e. they are losing soil, often by sheet erosion (a uniform wall of water)   
+
+## Terraces 
+*Positions* **tread** horizontal step like portion. **riser** vertical step like portion   
+Origins  
+  - Fluvial/Lacustrine/Marine terraces; as the level of water varies it eats away portions of the bedrock  
+  - Structural Terraces (or Bench); develop in 'flat' areas, different layers of bedrock weather at different rates   
+
+
+::: {style="float: left; width: 60%;"}
+<center>
+![Rowena Plateau](./images/landforms/RowenaPlateauCRG-FriendsColumbiaGorge.jpg){width=100%}
+</center>
+:::
+
+::: {style="float: right; width: 40%;"}
+<center>
+![Terrace positions](./images/landforms/terraces.png){width=80%}
+
+</center>
+:::
+
+## Flats 1/2
+
+::: {style="float: left; width: 40%;"}
+
+*Valleys* surrounded by mountains/hills on two sides (and likely to contain a terrace(s)).  
+
+*Plains* areas largely surrounded by mountains/hills on all sides.  
+
+*Playas* an (historically/currently) vernal lake in an endorheic basin
+:::
+
+::: {style="float: right; width: 60%;"}
+<center>
+![Playa](./images/landforms/AlvordDesertPlayaBLM.jpg){width=85%}
+</center>
+:::
+
+## Flats 2/2
+
+::: {style="float: left; width: 60%;"}
+Origins:   
+*Valleys* Fluvial action eroding mountains, and the distribution of sediment throughout; Glacial action; areas where two tectonic plates are moving apart and causing 'rifts', the ground to sink.     
+*Plains* Depositional where sediment is deposited from rivers or glaciers or lakes; Erosional, where forces have essentially leveled all bedrock and features.   
+:::
+
+::: {style="float: right; width: 40%;"}
+*Playas* associated with valleys which lack a low point for streams to escape from. Upslope stream water, which has accumulated soil minerals, runs into the low point of the valley, and eventually evaporates, leaving behind the minerals.  
+<center>
+![Playa](./images/landforms/AlvordDesertPlayaBLM.jpg){width=100%}
+</center>
+::: 
+
+## Dunes 
+
+::: {style="float: left; width: 50%;"}
+- Aeolian Dunes & General  
+  - *Windward* side exposed to the predominant wind **windward**   
+  - *slip face* the side downwind of the windward side; generally gentler than the windward side.   
+  - *dune slack* flat-ish areas between individuals dunes.   
+- Marine Dunes  
+  - *foredune* the first ridge of dunes running parallel to the water)   
+  - *backdunes* all dunes inland from foredunes   
+  - *dune hollow* areas of dune slack essentially at water level   
+:::
+
+::: {style="float: right; width: 50%;"}
+<center>
+![<font size="3">Aeolian Dune Shapes</font>](./images/landforms/AeolianDuneTypes.png){width=85%}
+</center>
+:::
+
+## Slope Shape  
+
+::: {style="float: left; width: 60%;"}
+- The slopes of hills and other features affect the distribution of water, nutrients, and rocks.   
+- Both down (profile), and across (plan) slope.  
+- Three main shapes: Linear, Concave, Convex.   
+- Convex areas are less likely to build up considerable soil, and maintain water relative to linear and concave slopes.  
+- parlance: profile-plan e.g. 4 is convex-linear, 5 is concave-linear ('straight' is a European term)
+::: 
+
+::: {style="float: left; width: 40%;"}
+<center>
+![<font size="3">Slope Shapes (Dragut-Blaschke)</font>](./images/landforms/Dragat-Blaschke-slope_shape.resized.png)
+<font size="3">Drăguţ, Lucian Daniel and Thomas Blaschke. "Automated classification of landform elements using object-based image analysis."
+</center>
+</font>
+:::
+
+## Geormophons - simplified
+
+- accumulation of soil nutrients, and water relations at scales relevant to vegetation  
+- Many features affect plant growth in similar ways.   
+
+<center>
+![<font size="3">Geomorphons (Stepinski)</font>](./images/landforms/Geomorphons_Stepinski.resized.png)
+</center>
+
+<font size="3">
+Stepinski, T., Jasiewicz, J., 2011, "Geomorphons - a new approach to classification of landform"  
+Jasiewicz, J., Stepinski, T., 2013, "Geomorphons - a pattern recognition approach to classification and mapping of landforms" 
+</font>
+
+# III. Soils
+
+## Textural Components  
+
+::: {style="float: left; width: 50%;"}
+- **Sand** generally broken feldspar and quartz minerals; largest size component   
+- **Clay** small molecules, composed of phyllosilicates, absorb and shed water; smallest size component   
+- **Silt** intermediate sized particles, largely of more broken quartz; intermediate size component   
+:::
+
+::: {style="float: right; width: 50%;"}
+<center>
+![USDA Soil Texture](./images/soil/Soil_Triangle.png){width=90%}
+</center>
+:::
+
+## Sand 
+
+::: {style="float: left; width: 50%;"}
+- Clues: 'gritty sound', 'gritty feel'
+- tests: sound, 'wash away', soil ribbon
+:::
+
+::: {style="float: right; width: 50%;"}
+<center>
+![Encyclopedia Brittanica](./images/soil/sand_encyclopedia_brittanica.png){width=90%}
+</center>
+:::
+
+## Sand - Size Classes
+
+- very small grains are difficult to visually detect
+- Complication: smaller sizes sand can be confused with silt in texture tests.
+- tests: 'wash away' can somewhat sort sand grains by size. 
+
+<center>
+![Sand Sizes - to scale](./images/soil/SandSizes.png){width=95%}
+</center> 
+
+## Clay
+
+::: {style="float: left; width: 40%;"}
+- Clues: 'buttery feel' - when texturing
+- tests: pencil test, soil ribbon
+:::
+
+::: {style="float: right; width: 60%;"}
+<center>
+![Clay](./images/soil/Clay_magnified-ID_McKee.jpg){width=95%}
+</center>
+:::
+
+## Silt
+
+::: {style="float: left; width: 40%;"}
+- Clues: 'flour like feel' - especially when dry. 
+- tests: soil ribbon
+:::
+
+::: {style="float: right; width: 60%;"}
+<center>
+![Silt](./images/soil/Silty.jpg){width=95%}
+</center>
+:::
+
+## Soil texture varies across geomorphons
+
+Sand,  
+1) often picked up from mountains (esp. volcanic) and blown similar distances to create massive depositional areas (dune fields)  
+2) often picked up by rivers, but dropped when water slows down (fluvial... )  
+3) where blown away can create 'desert pavement'  
+
+Clay,  
+1) able to be carried far distances by water, generally until the water becomes stagnant (lakes). Upon drying lakes become playas
+2) moves throughout the soil profile as water levels change, and can accumulate around roots. 
+
+Silt,  
+1) generally falling out of suspension just upslope of clay (alluvial systems) - but inextricably linked.
+
+## Soil texture varies across geomorphons
+<center>
+![Slope Angle](./images/soil/Cross_Section_Fan.png){width=30%}
+![Rock Fragments](./images/soil/Rock_Frags_Fan.png){width=30%}
+![Soil Textures](./images/soil/Soil_Texture_Fan.png){width=30%}
+</center>
+
+## Soil texture - illustrated
+![Barplot](./images/soil/Soil_Texture_Components-barplot.png){width=24%}
+![Soil Textures](./images/soil/Soil_Texture_Examples.png){width=24%}
+![Soil Triangle](./images/soil/Soil_Texture_Components.png){width=24%}
+![USDA Soil Texture](./images/soil/Soil_Triangle.png){width=24%}
+
+## Soil Colour
+
+::: {style="float: left; width: 50%;"}
+- Reflects the amount of soil organic matter, mineral types, and oxidation status. 
+- Colour itself does not affect soil or plant growth - purely reflects chemical parameters
+- color soil when it is moderately wet, but not as wet as for a soil ribbon test
+:::
+
+::: {style="float: right; width: 50%;"}
+<center>
+![Soil Colors](./images/soil/SoilColors-2.bp.blogspot.jpg){width=95%}
+</center>
+::: 
+
+## Carbonates
+
+::: {style="float: left; width: 60%;"}
+
+- Calcium carbonates, generally derived from sedimentary limestones, dissolve readily into rainwater. 
+- As the rainwater evaporates the carbonates precipitate into solids 
+- this generally occurs at moderate soil depths (30-50cm), following day/night cycles of plant water use. 
+- In certain areas (esp. Chihuahuan desert) forming an impermeable layer - caliche
+:::
+
+::: {style="float: right; width: 40%;"}
+<center>
+![Petrocalcic Layers](./images/soil/Jornada-Petrocalcic-Monger.jpeg){width=95%}
+</center>
+:::
+
+## Salinity  
+
+::: {style="float: left; width: 60%;"}
+
+- continual dissolution into soil moisture when wet, continual precipitation as soil dries
+- Continual movement of various salts (cations), such as Calcium, Magnesium, Sodium (from mudstones!) to down slope areas
+- extreme salinity build ups; cations hold onto water molecules more strongly than most plant roots can grab them
+:::
+
+::: {style="float: right; width: 40%;"}
+<center>
+![Extreme Soil Salinity Colorado Rangelands](./images/soil/Salinity-NRCS.jpg){width=95%}
+</center>
+:::
+
+## Rock Fragments  
+
+::: {style="float: left; width: 50%;"}
+- Soils vary in the amount, size, and dimensions, of rock fragments. 
+- Rock fragments decrease the water holding capacity of a soil. 
+- If soils have > 15% rock fragments, they have a modifier, e.g. '*Very gravelly* sandy loam'
+:::
+
+::: {style="float: right; width: 50%;"}
+<center>
+![Cover Estimates](./images/soil/RockFragment_Covers.png){width=95%}
+</center>
+:::
+
+## Rock Fragments - Size
+
+::: {style="float: left; width: 50%;"}
+- Rock fragments are > 2mm in diameter, just larger than very coarse sand  
+  - Gravel (2-75 mm)  
+  - Cobbles (75-250 mm)  
+  - Stones (250-600 mm)
+  - Boulders (600+ mm) 
+  
+:::
+
+::: {style="float: right; width: 50%;"}
+- measure rocks along the longest axis
+- Very flat (essentially laterally compressed) rocks: 
+  - channers (2mm-15cm)
+  - flagstones (15-38cm)
+  - 'flat stone' (>38cm)
+  
+:::
+
+## Rock Fragments - Texture Modifiers
+
+- When describing soils, if the soil is more than 15% rock fragments, a texture modifier is used, e.g. '*Very gravelly* sandy loam'  
+- Texture modifiers are quickly calculated by working across the first two columns, from left to right (Table 1), and making the final comparison). 
+
+<center>
+![Texture Modifiers](./images/soil/RockFragmentTextureModifiers.png){width=80%}
+</center>
+
+## Rock Fragments - Texture Modifiers - Examples
+
+- Texture modifiers are quickly calculated by working across the first two columns, from left to right (Table 1), and making the final comparison). 
+- Examples at right show the calculations in the final column.
+
+<center>
+![Modifier Examples](./images/soil/RockFragmentTextureModifiers-Examples.png){width=90%}
+</center>
+
+## Soil Horizons - Master Layers
+
+::: {style="float: left; width: 60%;"}
+- distinguishable to humans via sight and touch   
+- up to 5 master layers
+  - **A** Surface Soil. The most organic matter and microbial activity. Clay minerals and oxides form here. 
+  - **E** Mineral horizon. Has lost Fe, Al, Mn oxides, clay minerals; organic matter via illuviation.
+  - **B** Subsoil, less microbial activity The clay and oxides, which tend to color this layer, percolate down via illuviation. 
+  
+:::
+
+::: {style="float: right; width: 40%;"}
+<center>
+  - **C** Substratum. At most, partially weathered rocks. Often accumulates mobile minerals like CaCO~3~
+
+![Master Layers](./images/soil/MasterHorizons.jpg){width=80%}
+</center>
+:::
+
+## Soil Horizons - Suffixes
+
+::: {style="float: left; width: 60%;"}
+- Express modifications to a horizon, each horizon may have several. Some examples.    
+  - **t** accumulation of clay from an upper horizon   
+  - **k** accumulation of carbonates   
+  - **m** cementation of soil via a mineral agent (e.g. **k**)   
+- Some are restricted to certain horizons
+- Some are modifiers, e.g. **m**.
+- Horizons can be subdivided into different suffixes, e.g. bk'1 and bk'2
+
+:::
+
+::: {style="float: right; width: 40%;"}
+<center>
+![Jornada](./images/soil/JornadaSuffixes.jpg){width=75%}
+</center>
+:::
+
+## In Closing... 
+
+this is a totally distinct branch of natural history, we really ask little of you. Just get out there and give it a try.   
+
+# CONTACT
+
+::: {style="float: left; width: 50%;"}
+
+![](./images/QRCode.png){
+  width=300
+  fig-align='center'}
+:::
+
+::: {style="float: right; width: 50%;"}
+
+![](./images/CBG_Logos/NegauneeInstitute_CBG-Logo-Vertical.png){
+  width=350
+  fig-align='center'
+}
+:::
